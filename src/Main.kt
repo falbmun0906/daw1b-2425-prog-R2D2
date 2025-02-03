@@ -1,0 +1,40 @@
+fun main() {
+
+    /*var dir = Direcciones.DERECHA
+
+    dir = if (dir.ordinal < Direcciones.entries.size - 1) Direcciones.entries[dir.ordinal + 1] else Direcciones.entries[0]
+    println(dir)*/
+
+    val robot1: Robot = Robot("R2D2")
+    val robot2: Robot = Robot("Arturito")
+
+    val movimientos1: Map<String, Array<Int>> = mapOf(
+        "1" to arrayOf(10, 5, -2),
+        "2" to arrayOf(0, 0, 0),
+        "3" to arrayOf(),
+        "4" to arrayOf(-10, -5, 2),
+        "5" to arrayOf(-10, -5, 2, 4, -8)
+    )
+
+    val movimientos2: Map<String, Array<Int>> = mapOf(
+        "1" to arrayOf(1, -5, 0, -9),
+        "2" to arrayOf(3, 3, 5, 6, 1, 0, 0, -7),
+        "3" to arrayOf(2, 1, 0, -1, 1, 1, -4),
+        "4" to arrayOf(),
+        "5" to arrayOf(3, 5)
+    )
+
+    println("\nMOVIENDO A R2D2:\n")
+
+    for (movimiento in movimientos1.values) {
+        robot1.mover(movimiento)
+        println(robot1)
+    }
+
+    println("\nMOVIENDO A ARTURITO:\n")
+
+    for (movimiento in movimientos2.values) {
+        robot2.mover(movimiento)
+        println(robot2)
+    }
+}
