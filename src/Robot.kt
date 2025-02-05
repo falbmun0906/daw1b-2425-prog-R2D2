@@ -2,10 +2,22 @@ class Robot(private val nombre: String) {
 
     var posX: Int = 0
     var posY: Int = 0
-
     var direction = Direcciones.POSITIVEY
 
+    constructor(nombre: String, posX: Int, posY: Int, direccion: Direcciones) : this(nombre) {
+        this.posX = posX
+        this.posY = posY
+        this.direction = direccion
+    }
+
     fun mover(movimientos: Array<Int>) {
+        when (this.nombre) {
+            "R2D2" -> {}
+            "DAW1A" -> {}
+            "DAW1B" -> {}
+            "DAM1" -> {}
+        }
+
         for (movimiento in movimientos)
             when (direction) {
                 Direcciones.POSITIVEY -> {

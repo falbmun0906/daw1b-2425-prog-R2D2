@@ -1,4 +1,10 @@
+import kotlin.random.Random
+
 fun main() {
+
+    // PARTE 1
+    println("""PARTE 1
+        **********************************************************""")
 
     /*var dir = Direcciones.DERECHA
 
@@ -38,3 +44,12 @@ fun main() {
         println(robot2)
     }
 }
+
+// PARTE 2
+
+    val robots: List<Robot> = listOf(
+        Robot("R2D2", 0, 0, Direcciones.POSITIVEY),
+        Robot("DAW1A", Random.nextInt(-5, 5), 0, Direcciones.POSITIVEX),
+        Robot("DAW1B",0, Random.nextInt(-10, 10), Direcciones.entries.random()),
+        Robot("DAM1", Random.nextInt(-5, 5), Random.nextInt(-5, 5), Direcciones.entries.random())
+    )
