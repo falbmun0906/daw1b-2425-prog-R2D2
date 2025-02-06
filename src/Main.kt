@@ -11,8 +11,7 @@ fun main() {
     dir = if (dir.ordinal < Direcciones.entries.size - 1) Direcciones.entries[dir.ordinal + 1] else Direcciones.entries[0]
     println(dir)*/
 
-    val robot1: Robot = Robot("R2D2")
-    val robot2: Robot = Robot("Arturito")
+    val robots1 = listOf(Robot("R2D2"), Robot("Arturito"))
 
     val movimientos1: Map<String, Array<Int>> = mapOf(
         "1" to arrayOf(10, 5, -2),
@@ -33,20 +32,20 @@ fun main() {
     println("\nMOVIENDO A R2D2:\n")
 
     for (movimiento in movimientos1.values) {
-        robot1.mover(movimiento)
-        println(robot1)
+        robots1[0].mover(movimiento)
+        println(robots1[0])
     }
 
     println("\nMOVIENDO A ARTURITO:\n")
 
     for (movimiento in movimientos2.values) {
-        robot2.mover(movimiento)
-        println(robot2)
+        robots1[1].mover(movimiento)
+        println(robots1[1])
     }
 
 // PARTE 2
 
-    val robots: List<Robot> = listOf(
+    val robots2: List<Robot> = listOf(
         /*Robot("R2D2", 0, 0, Direcciones.POSITIVEY),
         Robot("DAW1A", Random.nextInt(-5, 5), 0, Direcciones.POSITIVEX),
         Robot("DAW1B",0, Random.nextInt(-10, 10), Direcciones.entries.random()),
@@ -58,7 +57,7 @@ fun main() {
         Robot("DAM1")
     )
 
-    for (robot in robots) {
+    for (robot in robots2) {
         for (movimiento in movimientos2.values)
         robot.mover(movimiento)
         println("POSICION FINAL:\n\t$robot")
