@@ -43,13 +43,24 @@ fun main() {
         robot2.mover(movimiento)
         println(robot2)
     }
-}
 
 // PARTE 2
 
     val robots: List<Robot> = listOf(
-        Robot("R2D2", 0, 0, Direcciones.POSITIVEY),
+        /*Robot("R2D2", 0, 0, Direcciones.POSITIVEY),
         Robot("DAW1A", Random.nextInt(-5, 5), 0, Direcciones.POSITIVEX),
         Robot("DAW1B",0, Random.nextInt(-10, 10), Direcciones.entries.random()),
-        Robot("DAM1", Random.nextInt(-5, 5), Random.nextInt(-5, 5), Direcciones.entries.random())
+        Robot("DAM1", Random.nextInt(-5, 5), Random.nextInt(-5, 5), Direcciones.entries.random())*/
+
+        Robot("R2D2"),
+        Robot("DAW1A"),
+        Robot("DAW1B"),
+        Robot("DAM1")
     )
+
+    for (robot in robots) {
+        for (movimiento in movimientos2.values)
+        robot.mover(movimiento)
+        println("POSICION FINAL:\n\t$robot")
+    }
+}
